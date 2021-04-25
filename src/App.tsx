@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  return (
+
+    const [count, setCount] = useState(0)
+    // const [reset, setReset] = useState(0)
+    return (
     <div className="App">
       <header className="App-header">
-        <button>click</button>
+          <p>{count}</p>
+        <a onClick = {() => {setCount(count + 1)}}>click</a>
+        <a onClick = {() => {setCount(0 ) }}>reset</a>
       </header>
     </div>
   );
