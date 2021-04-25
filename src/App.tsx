@@ -11,7 +11,7 @@ function App() {
         if (maxValue === count) {
             return
         }
-        setCount(count++)
+        setCount(count + 1)
     }
 
     const resetCount = () => setCount(0)
