@@ -8,8 +8,8 @@ type DisplayPropsType = {
 
 export function Display(props: DisplayPropsType) {
     return (
-        <div className={"display"}>
-            <span className={props.count === props.maxValue ? "error" : ""}>{props.count}</span>
+        <div>
+            <span className={props.count === props.maxValue ? "display" : ""}>{props.count}</span>
         </div>
     )
 }

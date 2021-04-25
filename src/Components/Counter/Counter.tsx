@@ -1,6 +1,7 @@
 import React from "react";
-import {Display} from "./Display";
-import {Button} from "./Button";
+import './Counter.css'
+import {Display} from "../Display/Display";
+import {Button} from "../Button/Button";
 
 type CountPropsType = {
     incCount: () => void
@@ -10,8 +11,11 @@ type CountPropsType = {
 }
 export function Counter(props: CountPropsType) {
 return (
-    <div className={"display"}>
-        <Display count={props.count} maxValue={props.maxValue}/>
+    <div className={"counter"}>
+        <Display
+            count={props.count}
+            maxValue={props.maxValue}
+        />
         <Button
             incCount={props.incCount}
             resetCount={props.resetCount}

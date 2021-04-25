@@ -1,5 +1,5 @@
 import React from "react";
-import './Display.css'
+
 
 type ButtonPropsType = {
     incCount: () => void
