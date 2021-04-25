@@ -1,24 +1,12 @@
-import React, {useState} from "react";
+import React from "react";
 
-export function Display() {
-    let [count, setCount] = useState(0)
 
-    function incNumbers() {
-        // setNumbers(numbers)
-        if (count < 5) {
-            return
-        }
-        setCount(count++)
-    }
-
-    function resetNumbers() {
-        setCount(0)
-    }
-    return(
-        <div className={"button"}>
-            <p>{count}</p>
-            <button onClick={incNumbers}>inc</button>
-            <button onClick={resetNumbers}>reset</button>
-        </div>
-    )
+type DisplayPropsType = {
+count: number
 }
+export function Display(props: DisplayPropsType) {
+return (
+    <div className={"display"}>
+        <p>{props.count}</p>
+    </div>
+)}

@@ -1,24 +1,17 @@
 import React, {useState} from "react";
 
-export function Button() {
-    let [count, setCount] = useState(0)
+type ButtonPropsType = {
+    incCount: () => void
+    resetCount: () => void
+    maxValue: number
+    count: number
+}
+export function Button(props: ButtonPropsType) {
 
-    function incNumbers() {
-        // setNumbers(numbers)
-        if (count < 5) {
-            return
-        }
-        setCount(count++)
-    }
-
-    function resetNumbers() {
-        setCount(0)
-    }
     return(
         <div className={"button"}>
-            <p>{count}</p>
-            <button onClick={incNumbers}>inc</button>
-            <button onClick={resetNumbers}>reset</button>
+            <button disabled={props.count === props.maxValue} onClick={props.incCount}>inc</button>
+            <button disabled={props.count === 0} onClick={props.resetCount}>reset</button>
         </div>
     )
 }
