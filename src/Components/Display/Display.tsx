@@ -1,5 +1,5 @@
 import React from "react";
-import "./Display.css"
+import styles from './Display.module.css'
 
 type DisplayPropsType = {
     count: number
@@ -8,8 +8,8 @@ type DisplayPropsType = {
 
 export function Display(props: DisplayPropsType) {
     return (
-        <div>
-            <span className={props.count === props.maxValue ? "display" : ""}>{props.count}</span>
+        <div className={styles.display}>
+            <span className={props.count === props.maxValue ? styles.count : ""}>{props.count}</span>
         </div>
     )
 }

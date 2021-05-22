@@ -1,5 +1,5 @@
 import React from "react";
-import './Counter.css'
+import styles from './Counter.module.css'
 import {Display} from "../Display/Display";
 import {Button} from "../Button/Button";
 
@@ -11,7 +11,7 @@ type CountPropsType = {
 }
 export function Counter(props: CountPropsType) {
 return (
-    <div className={"counter"}>
+    <div className={styles.counter}>
         <Display
             count={props.count}
             maxValue={props.maxValue}

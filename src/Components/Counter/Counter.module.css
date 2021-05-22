@@ -1,0 +1,11 @@
+.counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid cyan;
+    border-radius: 7px;
+    width: 330px;
+    height: 255px;
+    background-color: #2a2c36;
+    margin: auto;
+}

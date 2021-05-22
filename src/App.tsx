@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import './App.css';
-
+import styles from './App.module.css';
 import {Counter} from "./Components/Counter/Counter";
 
 function App() {
@@ -18,15 +17,14 @@ function App() {
 
 
     return (
-        <div className="App">
-            <header className="App-header">
+        <div className={styles.App} >
+
                <Counter
                    incCount={incCount}
                    resetCount={resetCount}
                    count={count}
                    maxValue={maxValue}
                />
-            </header>
         </div>
     );
 }
