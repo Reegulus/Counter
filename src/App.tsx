@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styles from './App.module.css';
-import {Counter} from "./Components/Counter/Counter";
+import {Counter} from "./Components/mainCounter/Counter/Counter";
+import {DisplayValue} from "./Components/parameters/DisplayValue";
 
 function App() {
     const maxValue = 5
@@ -18,13 +19,14 @@ function App() {
 
     return (
         <div className={styles.App} >
-
+            <DisplayValue/>
                <Counter
                    incCount={incCount}
                    resetCount={resetCount}
                    count={count}
                    maxValue={maxValue}
                />
+
         </div>
     );
 }
